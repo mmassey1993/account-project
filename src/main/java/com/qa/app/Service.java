@@ -35,5 +35,13 @@ public class Service {
 		} else return "This account does not exist.";
 		
 	}
+	
+	public String checkIfBlocked(int key, String accountnumber) throws AccountBlockedException{
+		Account check = accountMap.get(key);
+		if (check.getAccountNumber().equals("123456")) {
+			throw new AccountBlockedException("Account number " + check.getAccountNumber() + " is blocked.");
+		}
+		return accountnumber;
+	}
 
 }

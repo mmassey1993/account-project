@@ -30,21 +30,21 @@ public class Test {
 		assertEquals(true, test.getAccountMap().size() == 2);
 	}
 	
-	@org.junit.Test
-	public void getAccountTest() {
-		test.addAccount(1, account1);
-		test.addAccount(2, account2);
-		assertEquals("First Name: " + account1.getFirstName() + " Last Name: " + account1.getLastName() + " Account Number: " + account1.getAccountNumber(), test.getAccount(1));
-		assertEquals("First Name: " + account2.getFirstName() + " Last Name: " + account2.getLastName() + " Account Number: " + account2.getAccountNumber(), test.getAccount(2));
-	}
+//	@org.junit.Test
+//	public void getAccountTest() {
+//		test.addAccount(1, account1);
+//		test.addAccount(2, account2);
+//		assertEquals("First Name: " + account1.getFirstName() + " Last Name: " + account1.getLastName() + " Account Number: " + account1.getAccountNumber(), test.getAccount(1));
+//		assertEquals("First Name: " + account2.getFirstName() + " Last Name: " + account2.getLastName() + " Account Number: " + account2.getAccountNumber(), test.getAccount(2));
+//	}
 	
-	@org.junit.Test
-	public void removeAccountTest() {
-		test.addAccount(1, account1);
-		test.addAccount(2, account2);
-		assertEquals("Account removed", test.removeAccount(1));
-		assertEquals("This account does not exist.", test.removeAccount(4));
-		assertEquals(true, test.getAccountMap().size() == 1);
-	}
+//	@org.junit.Test
+//	public void removeAccountTest() {
+//		test.addAccount(1, account1);
+//		test.addAccount(2, account2);
+//		assertEquals("Account removed", test.removeAccount(1));
+//		assertEquals("This account does not exist.", test.removeAccount(4));
+//		assertEquals(true, test.getAccountMap().size() == 1);
+//	}
 
 }
