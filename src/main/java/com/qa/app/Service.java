@@ -50,15 +50,7 @@ public class Service {
 	public int countFirstName(String firstname) {
 		
 		return (int) accountMap.values().stream().filter(e -> e.getFirstName().equals(firstname)).count();
-//		int count = 0;
-//		Iterator<Entry<Integer, Account>> it = accountMap.entrySet().iterator();
-//		while (it.hasNext()) {
-//			Entry<Integer, Account> entry = it.next();
-//			if (entry.getValue().getFirstName().equals(firstname)) {
-//				count++;
-//			}
-//		}
-//		return count;
+
 	}
 
 }
