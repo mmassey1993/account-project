@@ -1,6 +1,8 @@
 package com.qa.app;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 public class Service {
 	
@@ -42,6 +44,18 @@ public class Service {
 			throw new AccountBlockedException("Account number " + check.getAccountNumber() + " is blocked.");
 		}
 		return accountnumber;
+	}
+
+	public int countFirstName(String firstname) {
+		int count = 0;
+		Iterator<Entry<Integer, Account>> it = accountMap.entrySet().iterator();
+		while (it.hasNext()) {
+			Entry<Integer, Account> entry = it.next();
+			if (entry.getValue().getFirstName().equals(firstname)) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 }
