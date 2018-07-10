@@ -22,9 +22,9 @@ public class Service {
 		return "Account added.";
 	}
 	
-	public String getAccount(int key) {
+	public Account getAccount(int key) {
 		
-		return accountMap.get(key).toString();
+		return accountMap.get(key);
 	}
 	
 	public String removeAccount(int key) {
