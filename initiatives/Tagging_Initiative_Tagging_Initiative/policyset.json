@@ -1,0 +1,89 @@
+{
+ "properties": {
+  "displayName": "Tagging Initiative",
+  "policyType": "Custom",
+  "description": "This initiative checks whether purge protection and soft deleted are enabled on key vaults",
+  "metadata": {
+   "category": "Custom",
+   "version": "0.1.0",
+   "createdBy": "ce217cf5-0eb0-4ceb-8c70-bc45b1f020ef",
+   "createdOn": "2021-12-23T12:03:51.9484225Z",
+   "updatedBy": "ce217cf5-0eb0-4ceb-8c70-bc45b1f020ef",
+   "updatedOn": "2021-12-23T12:10:19.8720124Z"
+  },
+  "parameters": {
+   "tagName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Tag name",
+     "description": "A tag to audit"
+    }
+   },
+   "tagName1": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Tag name",
+     "description": "A tag to audit"
+    }
+   },
+   "tagName2": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Tag name",
+     "description": "A tag to audit"
+    }
+   },
+   "tagName3": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Tag name",
+     "description": "A tag to audit"
+    }
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "684394300189781469",
+    "policyDefinitionId": "/subscriptions/79966e1b-9602-44ba-9f33-2bf83ba9a623/providers/Microsoft.Authorization/policyDefinitions/Tagging Audit Policy",
+    "parameters": {
+     "tagName": {
+      "value": "[parameters('tagName')]"
+     },
+     "tagName1": {
+      "value": "[parameters('tagName1')]"
+     },
+     "tagName2": {
+      "value": "[parameters('tagName2')]"
+     },
+     "tagName3": {
+      "value": "[parameters('tagName3')]"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "taggingAppendPolicyName_1",
+    "policyDefinitionId": "/subscriptions/79966e1b-9602-44ba-9f33-2bf83ba9a623/providers/Microsoft.Authorization/policyDefinitions/taggingAppendPolicyName",
+    "parameters": {
+     "tag1": {
+      "value": "tagName"
+     },
+     "tag2": {
+      "value": "tagName1"
+     },
+     "tag3": {
+      "value": "tagName2"
+     },
+     "tag4": {
+      "value": "tagName3"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/79966e1b-9602-44ba-9f33-2bf83ba9a623/providers/Microsoft.Authorization/policySetDefinitions/Tagging Initiative",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "Tagging Initiative"
+}
